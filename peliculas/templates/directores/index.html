@@ -1,0 +1,9 @@
+{% if listado_directores %}
+    <ul>
+    {% for director in listado_directores %}
+        <li><a href="{% url 'director_detalle' director.id %}">{{ director.nombre }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No hay directores registrados.</p>
+{% endif %}

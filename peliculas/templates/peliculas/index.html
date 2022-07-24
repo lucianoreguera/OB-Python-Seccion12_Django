@@ -1,0 +1,9 @@
+{% if listado_peliculas %}
+    <ul>
+    {% for pelicula in listado_peliculas %}
+        <li><a href="{% url 'pelicula_detalle' pelicula.id %}">{{ pelicula.nombre }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No hay películas registradas.</p>
+{% endif %}
